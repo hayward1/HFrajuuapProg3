@@ -34,9 +34,8 @@ public class GolyaBalPanel extends javax.swing.JPanel {
     DefaultListModel<ZeneSzam> zeneszamModell = new DefaultListModel<>();
     DefaultListModel<ZeneSzam> valasztottZeneModell = new DefaultListModel<>();
     DefaultListModel<Balozok> tancModell = new DefaultListModel<>();
-//    DefaultListModel<Balozok> fogyasztModell = new DefaultListModel<>();
 
-    Balozok balozo = null;
+    Balozok balozo;
     Golya golya;
 
     /**
@@ -184,7 +183,6 @@ public class GolyaBalPanel extends javax.swing.JPanel {
         beolvasZenek();
         rendez();
         lbl_tancolok.setVisible(false);
-//      statikBeallit();
     }//GEN-LAST:event_formAncestorAdded
     /*
     Hozzáadunk a Kívánság listához, egy Gólya által kiválasztott zenét!
@@ -221,16 +219,22 @@ public class GolyaBalPanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_lst_balozokMousePressed
 
+    /*
+    A mulatás gombra kattintva a bálozók kapnak random összeget.
+    Random módon kapnak táncszámot is.
+    A random metódus értékeit a Globál osztályból kapják meg.
+    */
+    
     private void btn_mutatasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_mutatasActionPerformed
         lbl_tancolok.setVisible(true);
         int fogyasztas = (int) (Math.random() * (Global.FELSO_FOGYASZTAS - Global.ALSO_FOGYASZTAS + 1) + Global.ALSO_FOGYASZTAS);
 
-        int tancoloIndex = (int) (Math.random() * balozokModell.size()); // 0-20 egy szám
-        Balozok tancolo = balozokModell.get(tancoloIndex); // randomadig Bálozó
+        int tancoloIndex = (int) (Math.random() * balozokModell.size()); 
+        Balozok tancolo = balozokModell.get(tancoloIndex);
         tancolo.tancol();
 
-        int penzkoltoIndex = (int) (Math.random() * balozokModell.size()); // 0-20 egy szám
-        Balozok penzkolto = balozokModell.get(penzkoltoIndex); // randomadig Bálozó
+        int penzkoltoIndex = (int) (Math.random() * balozokModell.size()); 
+        Balozok penzkolto = balozokModell.get(penzkoltoIndex); 
         penzkolto.fogyaszt(fogyasztas);
 
         tancModell.clear();
@@ -293,9 +297,6 @@ public class GolyaBalPanel extends javax.swing.JPanel {
         lst_zeneszam.setModel(zeneszamModell);
     }
 
-//    private void statikBeallit() {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//   }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_mutatas;

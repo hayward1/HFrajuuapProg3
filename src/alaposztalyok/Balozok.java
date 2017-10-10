@@ -20,7 +20,7 @@ public class Balozok implements Comparable<Balozok> {
     private int elkoltottPenz;
     private int tancainakSzama;
 
-    public Balozok(String nev, String evFolyam) // itt nem kell a sorszám, mert úgy számoltatod ki a konstruktorban
+    public Balozok(String nev, String evFolyam) 
     {
         this.nev = nev;
         this.evFolyam = evFolyam;

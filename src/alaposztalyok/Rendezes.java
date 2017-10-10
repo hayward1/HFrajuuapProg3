@@ -13,6 +13,10 @@ import java.util.Comparator;
  */
 public class Rendezes implements Comparator<Balozok>{
 
+    /*
+    Név sor szerint Ábécé sorrendben rendezzük a bálozók neveit.
+    */
+    
     @Override
     public int compare(Balozok t, Balozok t1) {
         return t.getNev().compareTo(t1.getNev());

@@ -28,9 +28,8 @@ public class Golya extends Balozok {
 
     @Override
     public void fogyaszt(int koltseg) {
-        // felülírjuk, mert ő is fogyaszt, csak kevesebbe kerül neki. Tehát az ertek értékét csökkenteni kell :)
         koltseg -= koltseg * (kedvezmenySzazalek / 100);
-        super.fogyaszt(koltseg); //itt meg meghívjuk a szülő osztály metódusát, me pont azt csinálja ami kell, csak a módosított értékkel.
+        super.fogyaszt(koltseg); 
     }
 
     public static int getKedvezmenySzazalek() {

@@ -14,7 +14,7 @@ public class Global {
     public static final int FELSO_ERTEK = 10000;
     public static final int ALSO_TANC = 0;
     public static final int FELSO_TANC = 50;
-    public static final int ALSO_FOGYASZTAS = 0;
+    public static final int ALSO_FOGYASZTAS = 500;
     public static final int FELSO_FOGYASZTAS = 1000;
     public static int MULATASI_CIKLUS_MERETE = 100; 
 }
