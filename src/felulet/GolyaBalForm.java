@@ -34,7 +34,7 @@ public class GolyaBalForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        golyaBalPanel1 = new felulet.GolyaBalPanel();
+        golyaBalPanel1 = new felulet.GolyabalPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().add(golyaBalPanel1, java.awt.BorderLayout.CENTER);
