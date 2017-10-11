@@ -79,6 +79,6 @@ public class GolyaBalForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private felulet.GolyaBalPanel golyaBalPanel1;
+    private felulet.GolyabalPanel golyaBalPanel1;
     // End of variables declaration//GEN-END:variables
 }
